@@ -1,0 +1,185 @@
+:root {
+  --primary: #ff0015;
+  --secondary: #1d1d1d;
+  --light: #f8f9fa;
+  --accent: #f1faee;
+  --spacing: 1rem;
+  --radius: 8px;
+  --transition: 0.3s;
+}
+.logo {
+  color: var(--accent);
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 1rem 0 0.2rem 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Đảm bảo căn giữa */
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+body {
+  background: var(--secondary);
+  color: var(--light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+header {
+  background: var(--primary);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing);
+  padding: var(--spacing) 0;
+}
+.nav-link {
+  color: var(--light);
+  text-decoration: none;
+  padding: 6px 18px;
+  border-radius: var(--radius);
+  transition: background var(--transition);
+  text-transform: uppercase;
+}
+.nav-link.active,
+.nav-link:hover {
+  background: var(--secondary);
+}
+.hoathinh-section {
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: var(--spacing);
+}
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2.2rem;
+}
+.hoathinh-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.hoathinh-item {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 2.5vw;
+  margin-bottom: 0;
+  padding: 2vw 0;
+}
+.poster-large {
+  flex-shrink: 0;
+  width: 310px;
+  max-width: 36vw;
+  height: 440px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #232526, #414345);
+  box-shadow: 0 2px 14px rgba(0,0,0,0.20);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow var(--transition), transform var(--transition);
+  position: relative;
+}
+.poster-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  transition: transform var(--transition);
+  display: block;
+}
+.poster-large:hover,
+.poster-large:focus {
+  box-shadow: 0 8px 32px rgba(255,0,21,0.30), 0 2px 16px rgba(0,0,0,0.23);
+  transform: scale(1.04) translateY(-8px);
+  z-index: 2;
+}
+.poster-large:hover img,
+.poster-large:focus img {
+  transform: scale(1.07);
+}
+.movie-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #232526 70%, #35363b 100%);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  padding: 2vw 2vw 2vw 2vw;
+  justify-content: center;
+}
+.movie-info h3 {
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 1.1rem;
+  font-size: 1.25rem;
+}
+.movie-info p {
+  color: var(--light);
+  font-size: 1.1rem;
+  margin-bottom: 1.3rem;
+}
+.movie-actions {
+  display: flex;
+  gap: var(--spacing);
+}
+.action-btn,
+.action-btn.outline {
+  text-decoration: none;
+  background: var(--primary);
+  color: var(--light);
+  border-radius: var(--radius);
+  padding: 0.6rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+footer {
+  background: var(--primary);
+  padding: var(--spacing) 0;
+  border-radius: var(--radius) var(--radius) 0 0;
+  margin-top: 2rem;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.13);
+}
+.center {
+  text-align: center;
+}
+/* Responsive */
+@media (max-width: 1050px) {
+  .poster-large {width: 29vw; height: 41vw; min-width:180px; min-height:260px;}
+  .movie-info {padding: 2vw 1vw;}
+}
+@media (max-width: 800px) {
+  .hoathinh-section {max-width: 100vw;}
+  .poster-large {width: 38vw; height: 54vw;}
+}
+@media (max-width: 600px) {
+  .hoathinh-item {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing);
+    padding: var(--spacing) 0;
+  }
+  .poster-large {
+    width: 80vw;
+    height: 52vw;
+    max-width: 95vw;
+    min-height: 160px;
+    margin-bottom: var(--spacing);
+  }
+  .movie-info {padding: var(--spacing);}
+}

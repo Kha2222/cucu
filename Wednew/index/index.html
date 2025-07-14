@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi"> <!-- Khai báo: đây là trang HTML, ngôn ngữ tiếng Việt -->
+<head>
+  <!-- Phần này chứa thông tin cấu hình, không hiển thị lên trang -->
+  <meta charset="UTF-8"> <!-- Đặt kiểu ký tự UTF-8 để hiển thị tiếng Việt đúng -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Cho trang tự co giãn theo thiết bị (điện thoại, máy tính) -->
+  <title>WebPhim - Trang Chủ</title> <!-- Tiêu đề trang, hiện ở tab trình duyệt -->
+  <link rel="stylesheet" href="index.css"> <!-- Nhúng file CSS để tạo kiểu -->
+</head>
+<body>
+  <!-- Phần đầu trang: logo và menu -->
+  <header>
+    <div class="header-bar"><!-- Khung chứa logo + menu -->
+      <span class="logo">WebPhim</span> <!-- Đây là tên trang, giống logo -->
+      <nav class="nav"><!-- Khu vực menu điều hướng -->
+        <!-- Mỗi <a> là 1 nút bấm chuyển trang -->
+        <a href="/Wednew/index/index.html" class="nav-link active">Trang Chủ</a>
+        <a href="/Wednew/phimmoi/phimmoi.html" class="nav-link">Phim Mới</a>
+        <a href="/Wednew/hoathinh/hoathinh.html" class="nav-link">Hoạt Hình</a>
+        <a href="/Wednew/phimhay/phimhay.html" class="nav-link">Phim Hay</a>
+        <a href="/Wednew/phimhai/phimhai.html" class="nav-link">Phim Hài</a>
+        <a href="/Wednew/phimviet/phimviet.html" class="nav-link">Phim Việt</a>
+        <a href="/Wednew/anime/anime.html" class="nav-link">Anime</a>
+        <a href="/Wednew/chitiet/chitiet.html" class="nav-link">Chi Tiết</a>
+        <a href="/Wednew/dangnhap/dangnhap.html" class="nav-link">Phim Hàn</a>
+        <a href="/Wednew/lienhe/lienhe.html" class="nav-link">Liên Hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Phần nội dung chính của trang -->
+  <main>
+    <!-- Mục banner có video nền -->
+    <section class="banner">
+      <video class="banner-video" autoplay muted loop playsinline>
+        <source src="/Wednew/banner.mp4" type="video/mp4">
+      </video>
+    </section>
+
+    <!-- Mục chào mừng và bộ sưu tập hình ảnh -->
+    <section>
+      <h2>Chào mừng đến với WebPhim</h2> <!-- Tiêu đề con -->
+      <p class="center">Khám phá kho phim đa dạng của chúng tôi!</p> <!-- Đoạn văn -->
+      <article class="gallery"> <!-- Khối gallery ảnh -->
+        <!-- Mỗi <a> + <img> là 1 hình bấm vào được -->
+        <a href="/Wednew/phim/phim.html" class="thumb card-hover">
+          <img src="/ảnh/AlienRomulus-scaled.avif" alt="Poster phim 1">
+        </a>
+        <a href="/Wednew/phim/phim.html" class="thumb card-hover">
+          <img src="/ảnh/brightburn_best-movie-posters-2019-designwithred.jpg" alt="Poster phim 2">
+        </a>
+        <a href="/Wednew/phim/phim.html" class="thumb card-hover">
+          <img src="/ảnh/Shin Godzilla.jfif" alt="Poster phim 3">
+        </a>
+      </article>
+
+      <!-- Bổ sung thông tin cơ bản về WebPhim -->
+      <div class="site-info-wrapper">
+        <details>
+          <summary> Thông tin WebPhim</summary>
+          <p>WebPhim là nền tảng xem phim trực tuyến với hơn 10.000 đầu phim đa dạng: Phim mới, Phim hay, Hoạt hình, Anime, Phim Việt…</p>
+          <p>✔️ Giao diện thân thiện, hỗ trợ mọi thiết bị.</p>
+          <p>✔️ Cập nhật phim nhanh chóng, chất lượng HD/Full HD.</p>
+          <p>✔️ Miễn phí và không yêu cầu đăng ký.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- Chân trang -->
+  <footer>
+    <p class="center">&copy; 2025 WebPhim. All rights reserved.</p>
+  </footer>
+</body>
+</html>

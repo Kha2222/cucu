@@ -1,0 +1,129 @@
+:root {
+  --primary: #ff0015;
+  --secondary: #1d1d1d;
+  --light: #f8f9fa;
+  --accent: #f1faee;
+  --spacing: 1rem;
+  --radius: 12px;
+  --transition: 0.3s;
+}
+.logo {
+  color: var(--accent);
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 1rem 0 0.2rem 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Đảm bảo căn giữa */
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+body {
+  background: var(--secondary);
+  color: var(--light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+header {
+  background: var(--primary);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing);
+  padding: var(--spacing) 0;
+}
+.nav-link {
+  color: var(--light);
+  text-decoration: none;
+  padding: 6px 18px;
+  border-radius: var(--radius);
+  transition: background var(--transition);
+  text-transform: uppercase;
+}
+.nav-link.active,
+.nav-link:hover {
+  background: var(--secondary);
+}
+.hai-section {
+  max-width: 1260px;
+  margin: 2.5rem auto;
+  padding: var(--spacing);
+}
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+.hai-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5vw;
+}
+.hai-card {
+  background: linear-gradient(135deg, #232526 80%, #414345 100%);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+  overflow: hidden;
+  width: 310px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2vw;
+  transition: box-shadow var(--transition), transform var(--transition);
+  position: relative;
+}
+.hai-card img {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+.hai-info {
+  padding: 1.1rem 1rem 1.2rem 1rem;
+  text-align: left;
+}
+.hai-info h3 {
+  color: var(--accent);
+  margin: 0 0 0.6rem 0;
+  text-transform: uppercase;
+  font-size: 1.08rem;
+}
+.hai-info p {
+  margin: 0;
+  color: var(--light);
+  font-size: 1rem;
+}
+.hai-card:hover,
+.hai-card:focus {
+  box-shadow: 0 8px 32px rgba(255,0,21,0.19), 0 2px 16px rgba(0,0,0,0.18);
+  z-index: 2;
+  transform: scale(1.03);
+}
+footer {
+  background: var(--primary);
+  padding: var(--spacing) 0;
+  border-radius: var(--radius) var(--radius) 0 0;
+  margin-top: 2rem;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.13);
+}
+.center {
+  text-align: center;
+}
+@media (max-width: 1050px) {
+  .hai-card {width: 44vw;}
+  .hai-card img {height: 54vw;}
+}
+@media (max-width: 600px) {
+  .hai-section {padding: var(--spacing) 0.2rem;}
+  .hai-grid {flex-direction: column; align-items: center;}
+  .hai-card {width: 92vw;}
+  .hai-card img {height: 54vw;}
+}
